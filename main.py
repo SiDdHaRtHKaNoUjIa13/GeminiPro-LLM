@@ -1,11 +1,8 @@
-
-import streamlit as st
-from dotenv import load_dotenv
-import google.generativeai as gen_ai
 import os
+import streamlit as st
+import google.generativeai as gen_ai
 
-# Load environment variables
-load_dotenv()
+
 
 # Configure Streamlit page settings
 st.set_page_config(
@@ -14,7 +11,8 @@ st.set_page_config(
     layout="centered",  # Page layout option
 )
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = "AIzaSyDqW7P-lCrBGX3f_L7hEt772KUHOhL3ASI"
+
 
 # Set up Google Gemini-Pro AI model
 gen_ai.configure(api_key=GOOGLE_API_KEY)
